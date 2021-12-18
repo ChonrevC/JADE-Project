@@ -24,7 +24,7 @@ public class Donut extends Product {
         return name + " (" 
               + ((frosting != Frosting.unfrosted) ? "frosted with " : "") + frosting
               + ((filling != Filling.unfilled) ? " filled with " : " ") + filling
-              + ((sprinkles) ? " add sprinkles" : "")
+              + ((sprinkles) ? ", add sprinkles" : "")
               + ") $" + price;
     }
 
