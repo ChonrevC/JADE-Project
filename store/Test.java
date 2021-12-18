@@ -34,7 +34,11 @@ public class Test {
             ignore = in.nextLine();
 
             // if Exit
-            if(choice == 0) break;
+            if(choice == 0) 
+            {
+                System.out.println("Have a great day!\n");
+                break;
+            }
 
             // invalid answer
             if(choice < 0 || choice > 2)
@@ -56,7 +60,7 @@ public class Test {
             {
                 System.out.println("\nBrew Options\n==============");
 
-                for(int i = 0; i < Darkness.values(); ++i)
+                for(int i = 0; i < Darkness.values().length; ++i)
                 {
                     System.out.println(i + ") " + Darkness.values()[i]);
                 }
@@ -74,7 +78,7 @@ public class Test {
 
                     for(int i = 0; i < Shot.values().length; ++i)
                     {
-                        System.out.println("i" + ") " + Shot.values()[i]);
+                        System.out.println(i + ") " + Shot.values()[i]);
                     }
 
                     System.out.print("\nAdd shot (-1 when done)? ");
