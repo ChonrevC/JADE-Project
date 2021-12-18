@@ -116,7 +116,7 @@ public class Test {
                 ignore = in.nextLine();
 
                 // Ask if the customer wans sprinkles
-                System.out.print("\nSprinkles (yes or no)? ")
+                System.out.print("\nSprinkles (yes or no)? ");
                 String sprinkles = in.nextLine();
 
                 // Add the new donut to the store
