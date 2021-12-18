@@ -22,8 +22,8 @@ public class Donut extends Product {
     @Override
     public String toString() {
         return name + " (" 
-              + ((frosting != Frosting.Unfrosted) ? "frosted with " : "") + frosting
-              + ((filling != Filling.Unfilled) ? " filled with " : " ") + filling
+              + ((frosting != Frosting.unfrosted) ? "frosted with " : "") + frosting
+              + ((filling != Filling.unfilled) ? " filled with " : " ") + filling
               + ((sprinkles) ? " add sprinkles" : "")
               + ") $" + price;
     }
