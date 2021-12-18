@@ -19,6 +19,7 @@ public class Donut extends Product {
     }
 
     //toString() method by Professor George Rice at UTA
+    @Override
     public String toString() {
         return name + " (" 
               + ((frosting != Frosting.Unfrosted) ? "frosted with " : "") + frosting
