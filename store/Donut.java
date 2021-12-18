@@ -6,7 +6,7 @@ public class Donut extends Product {
     protected Filling filling;
 
     // Constructor
-    public Donut(String name, double price, double cost, Frosting frosting, boolean sprinkles, Filling filling) {
+    public Donut(String name, double price, double cost, Frosting frosting, Filling filling, boolean sprinkles) {
         super(name, price, cost);
         this.frosting = frosting;
         this.sprinkles = sprinkles;
