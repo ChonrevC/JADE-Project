@@ -10,6 +10,7 @@ import store.Frosting;
 import store.Java;
 import store.Product;
 import store.Shot;
+import store.Store;
 
 // create an instance of the program where we create a test store
 public class Test {

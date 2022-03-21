@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Store {
 
     // Attributes a store should have
-    protected String storeName;
-    protected ArrayList<Product> products;
+    private String storeName;
+    private ArrayList<Product> products;
 
     // Constructor
     //      - uses only the store's name in its construction
