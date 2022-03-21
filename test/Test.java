@@ -1,9 +1,22 @@
+package test;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import store.Darkness;
+import store.Donut;
+import store.Filling;
+import store.Frosting;
+import store.Java;
+import store.Product;
+import store.Shot;
+
+// create an instance of the program where we create a test store
 public class Test {
 
     // Attributes
+
+    // Declare a store to run, and allow user input
     Store store;
     private static Scanner in = new Scanner(System.in);
 
@@ -22,14 +35,15 @@ public class Test {
 
         String ignore = "";
 
+        // create a store with the name of the store
         store = new Store(name);
 
-        // Always loops
+        // Always loops while the customer is in the store
         while(true)
         {
             // Have the customer choose what to do in the store
             System.out.println(store);
-            System.out.print("Options:\n 0) Exit\n 1) Add Java\n 2) Add Donut\n\nChoice? ");
+            System.out.print("Options:\n 0) Leave Store\n 1) Add Java\n 2) Add Donut\n\nChoice? ");
             int choice = in.nextInt();
             ignore = in.nextLine();
 
@@ -37,7 +51,7 @@ public class Test {
             if(choice == 0) 
             {
                 System.out.println("Have a great day!\n");
-                break;
+                return;
             }
 
             // invalid answer
@@ -46,6 +60,8 @@ public class Test {
                 System.err.println("\n\n### Error: Invalid Option: " + choice + "\n\n");
                 continue;
             }
+
+            // If answer isn't to exit or an invalid answer
 
             // Ask for the name, price, and cost of the product being added
             System.out.print("Name: ");
@@ -71,7 +87,7 @@ public class Test {
 
                 Java java = new Java(name, price, cost, Darkness.values()[darkness]);
 
-                // Keep adding shots until something
+                // Keep adding shots until user exits or gives invalid answer
                 while(true)
                 {
                     System.out.println("Shot Options\n==============");

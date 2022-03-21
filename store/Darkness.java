@@ -1,3 +1,5 @@
+package store;
+
 public enum Darkness {
     blond,
     light,

@@ -1,3 +1,5 @@
+package store;
+
 import java.util.ArrayList;
 
 public class Java extends Product{
@@ -7,11 +9,14 @@ public class Java extends Product{
     protected ArrayList<Shot> shots;
     
     // Constructor
+    //      - requires the coffee's name, price, cost, and darkness to create
     public Java(String name, double price, double cost, Darkness darkness) {
         
+        // All products have a name, price, and cost
         super(name, price, cost);
-        this.darkness = darkness;
 
+        // Coffees specifically have a certain darkness and an amount of shots
+        this.darkness = darkness;
         shots = new ArrayList<>();
 
     }
@@ -23,7 +28,8 @@ public class Java extends Product{
 
     @Override
     public String toString() {
-        String result = name + "(" + darkness + " with ";
+
+        String result = name + " (" + darkness + " with ";
 
         if(shots.size()== 0) result += "no shots";
         else
@@ -36,7 +42,7 @@ public class Java extends Product{
             }
         }
 
-        result += ") $" + price;
+        result += ")\t$" + price;
         return result;
     }
 
